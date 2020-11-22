@@ -3,10 +3,10 @@
     div.header
     div.content.flex-grow
       div.p-6
-        div
+        div.max-w-2xl
           h1.text-3xl.font-extrabold.mb-12.text-center Great! Do it 👩‍💻
           div.rounded.overflow-hidden.shadow-2xl.bg-white.border.border-gray-300.p-12
-            p.text-2xl.font-bold.mb-6 Avoid scheduling a formal meeting for later
+            p.text-2xl.font-bold.mb-6 Avoid scheduling a formal meeting
             p.mb-12 You’ll invite fewer people, and you’ll come to a decision more quickly (
               a.text-blue-500(href="https://en.wikipedia.org/wiki/Parkinson%27s_law") here’s why
               | ).
