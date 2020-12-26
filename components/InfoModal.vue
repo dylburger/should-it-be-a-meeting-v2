@@ -1,7 +1,7 @@
 <template lang="pug">
   transition(name="modal")
     div.modal-mask(v-show="show" @click="closeModal")
-      div.modal-container(@click.stop)
+      div.modal-container.modal-buffer.modal-height(@click.stop)
         p Did you know the average office worker spends
           span.special-text 45%
           | of their week in meetings? That's over
@@ -70,12 +70,29 @@ p {
 
 .modal-container {
   text-align: center;
-  margin: 40px auto 0;
   @apply py-10 px-10 max-w-6xl;
   background-color: #fff;
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;
+}
+
+.modal-buffer {
+  margin: 40px auto 0;
+}
+
+@media (max-width: 600px) {
+  .modal-buffer {
+    margin: 0px auto 0;
+  }
+
+  .modal-height {
+    height: 100%;
+  }
+
+  p {
+    @apply text-xl;
+  }
 }
 
 .modal-header h3 {
