@@ -24,6 +24,14 @@ export default {
       },
     },
   },
+  mounted() {
+    // Close the modal if Esc is pressed
+    document.addEventListener('keydown', (e) => {
+      if (this.show && e.keyCode === 27) {
+        this.closeModal()
+      }
+    })
+  },
   methods: {
     closeModal() {
       this.$emit('close')
