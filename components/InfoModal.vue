@@ -34,6 +34,7 @@ export default {
   },
   methods: {
     closeModal() {
+      window.fathom.trackGoal('TI3XSHAM', 0)
       this.$emit('close')
     },
   },
