@@ -65,6 +65,7 @@ p {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   transition: opacity 0.3s ease;
+  overflow-y: auto;
 }
 
 .modal-container {
