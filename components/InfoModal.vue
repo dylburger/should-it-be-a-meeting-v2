@@ -1,7 +1,7 @@
 <template lang="pug">
   transition(name="modal")
-    div.modal-mask(v-show="show")
-      div.modal-container
+    div.modal-mask(v-show="show" @click="closeModal")
+      div.modal-container(@click.stop)
         p Did you know the average office worker spends
           span.special-text 45%
           | of their week in meetings? That's over
@@ -10,7 +10,7 @@
         p Are you willing to spend
           span.special-text 30 seconds
           | to get some of that time back? 🙋‍♀
-        p.font-bold Answer a few questions and we'll help you figure out if your next meeting really needs to be a meeting 🙌
+        p.font-bold Answer a few questions to figure out if your next meeting really needs to be a meeting 🙌
         button.font-bold.text-lg.text-blue-500.py-3.px-6.border-2.border-blue-500.rounded-md(class="hover:bg-blue-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-5" @click="closeModal()") Let's Go
 </template>
 
@@ -24,14 +24,8 @@ export default {
       },
     },
   },
-  watch: {
-    show(data) {
-      console.log(`show: `, data)
-    },
-  },
   methods: {
     closeModal() {
-      console.log('Closing modal')
       this.$emit('close')
     },
   },
@@ -66,9 +60,8 @@ p {
 
 .modal-container {
   text-align: center;
-  width: 1000px;
   margin: 40px auto 0;
-  @apply py-10 px-10;
+  @apply py-10 px-10 max-w-6xl;
   background-color: #fff;
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
