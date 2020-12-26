@@ -21,6 +21,9 @@ export default {
         href: 'https://fonts.googleapis.com/css2?family=Inter&display=swap',
       },
     ],
+    script: [
+      { src: 'https://cdn.usefathom.com/script.js', 'data-site': 'MSXZYXUB' },
+    ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
