@@ -35,11 +35,12 @@ export default ({ app }) => {
     dataLayer.push(arguments)
   }
 
-  gtag('js', new Date())
-  gtag('config', GA_MEASUREMENT_ID)
+  // See https://developers.google.com/analytics/devguides/collection/gtagjs/ip-anonymization
+  gtag('config', GA_MEASUREMENT_ID, { anonymize_ip: true })
 
   // Always run without ads consent so Google doesn't set ads cookies
-  // https://developers.google.com/gtagjs/devguide/consent
+  // See https://developers.google.com/gtagjs/devguide/consent and
+  // https://support.google.com/analytics/answer/9976101?hl=en
   gtag('consent', 'default', {
     ad_storage: 'denied',
   })

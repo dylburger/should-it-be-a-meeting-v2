@@ -1,6 +1,10 @@
-# should-it-be-a-meeting
+# Should It Be A Meeting?
 
-## Build Setup
+[https://shoulditbeameeting.com](https://shoulditbeameeting.com)
+
+## Dev Setup
+
+SIBAM is a [Nuxt.js](https://nuxtjs.org) app. To run the site locally:
 
 ```bash
 # install dependencies
